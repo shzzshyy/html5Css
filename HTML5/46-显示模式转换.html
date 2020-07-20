@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            /* 行内元素a转化为快元素 就可以设置宽高*/
+            display: block;
+            background-color: red;
+            width: 150px;
+            height: 100px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            /* 块元素转化为行内元素 */
+            display: inline;
+        }
+
+        span {
+            width: 100px;
+            height: 100px;
+            color: sienna;
+            background-color: springgreen;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 行内元素转化为块元素 -->
+    <a href="#">哈哈哈哈哈</a>
+    <div>我是块元素</div>
+    <div>我是块元素</div>
+    <span>行内元素转换为行内块元素</span>
+    <span>行内元素转换为行内块元素</span>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单域 -->
+    <form action="demo.php" method="POST" name="name1">
+        <!-- 表单控件 -->
+        <!-- text 文本输入框 -->
+        用户名:<input type="text" name="username" maxlength="8"/> <br />
+        <!-- password 输入密码 -->
+        密码 &nbsp;: <input type="password" name="password" /> <br />
+        <!-- 单选按钮  name是表单元素的名字,只有name相同才能多选一-->
+        性别: 男<input type="radio" name="sex" checked> 女<input type="radio" name="sex"> <br>
+        <!-- 多选按钮 -->
+        爱好 : 唱歌<input type="checkbox" value="唱歌" checked/> 跳舞<input type="checkbox" value="跳舞"/>打篮球<input type="checkbox" value="打篮球"/>
+        <br>
+        <!-- 网络请求 提交 -->
+        <input type="submit" value="注册">
+        <!-- 重置所有默认值 -->
+        <input type="reset" value="重置">
+        <br>
+        <!-- 普通按钮 -->
+        <input type="button" value="获取短信验证码">
+        <br>
+        <!-- 上传文件 -->
+        上传头像 <input type="file">
+    </form>
+   
+
+</body>
+</html>
