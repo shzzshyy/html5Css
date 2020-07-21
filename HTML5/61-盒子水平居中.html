@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        .header {
+            /* 外边距可以让块级盒子水平居中,必须满足两个条件 */
+            /* 盒子必须制定了高度  盒子左右边距设置为auto */
+            width: 900px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: red;
+            /* 让行内元素或者行内块元素居中 */
+            text-align: center;
+        }
+
+        .damao,
+        .ermao {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .father {
+            margin-top: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+            /* 嵌套内边距 */
+            /* border: 1px transparent solid; */
+            /* padding: 1px; */
+            overflow: hidden;
+        }
+
+        .son {
+            margin-top: 20px;
+            background-color: saddlebrown;
+            width: 50px;
+            height: 50px;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="header">
+        <span>
+            里面的文字
+        </span>
+    </div>
+
+    <div class="damao">大毛</div>
+    <div class="ermao">二毛</div>
+
+    <!-- div塌陷 -->
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
