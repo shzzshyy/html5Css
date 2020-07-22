@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .doubleFix::before,
+        .doubleFix::after {
+            content: "";
+            display: table;
+        }
+
+        .doubleFix::after {
+            clear: both;
+        }
+
+        .doubleFix {
+            *zoom: 1;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            /* IE6 IE7 */
+            *zoom: 1;
+        }
+
+        .box {
+            background-color: pink;
+            /* 清除浮动 */
+            /* overflow: hidden; */
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        .damao,
+        .ermao,
+        .sanmao,
+        .simao {
+            float: left;
+        }
+
+        .damao {
+            height: 150px;
+            width: 150px;
+            background-color: purple;
+        }
+
+        .ermao {
+            height: 150px;
+            width: 150px;
+            background-color: blue;
+        }
+
+        .sanmao {
+            height: 150px;
+            width: 150px;
+            background-color: yellow;
+        }
+
+        .simao {
+            height: 150px;
+            width: 150px;
+            background-color: gray;
+        }
+
+        .other {
+            background-color: orange;
+            height: 200px;
+            width: 100%;
+        }
+
+        .wall {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 为什么要清除浮动 -->
+    <!-- 当div盒子大小不固定,需要子盒子撑开,如果不清除,Div大盒子高度默认为0,影响下面盒子的布局 -->
+    <!-- 清除地办法 -->
+    <!-- 1.隔墙法 新增的盒子必须是块级元素-->
+    <!-- 2.给父元素添加overflow -->
+    <!-- 3.after 给父类添加  -->
+    <!-- 4.双伪元素清除法 -->
+    <div class="box doubleFix">
+        <div class="damao">大猫</div>
+        <div class="ermao">二毛</div>
+        <div class="sanmao">三毛</div>
+        <div class="simao">思茅</div>
+        <div class="damao">大猫</div>
+        <div class="ermao">二毛</div>
+        <div class="sanmao">三毛</div>
+        <!-- <div class="wall"></div> -->
+    </div>
+    <div class="other">
+        hahaha
+    </div>
+</body>
+
+</html>
