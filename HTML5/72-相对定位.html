@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            /* 相对位置 */
+            position: relative;
+            top: 100px;
+            left: 100px;
+            background-color: pink;
+            height: 200px;
+            width: 200px;
+        }
+
+        .box2 {
+            background-color: purple;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 盒子只要加了定位 块元素也可以直接给宽高 -->
+    <!--定位 = 定位模式 + 边偏移  -->
+    <!-- 1.相对位置 相对于自己原来的位置进行偏移 -->
+    <!-- 2.移动之后,下面的盒子位置不变跟浮动不一样 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

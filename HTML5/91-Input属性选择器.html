@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        input[value] {
+            color: red;
+        }
+
+        input[type=passwor] {
+            color: black;
+        }
+
+        /* div  class 以icoo开头 */
+        div[class^=icoo] {
+            color: blue;
+        }
+
+        div[class$=p] {
+            color: chartreuse;
+        }
+    </Style>
+</head>
+
+<body>
+    <!-- 1.必须是input标签 必须有value属性 -->
+    <input type="text" value="123">
+    <!-- 2. -->
+    <input type="passwor" value="123">
+    <!-- 3. -->
+    <div class="icoo1">123123</div>
+    <div class="icoo1">123123</div>
+    <div class="icoo1">123123</div>
+    <div class="icoo1">123123</div>
+    <div class="icoo1">123123</div>
+    <!-- 4 -->
+    <div class="1ppp">123123</div>
+    <div class="1ppp">123123</div>
+    <div class="1ppp">123123</div>
+    <div class="1ppp">123123</div>
+    <div class="1ppp">123123</div>
+</body>
+
+</html>

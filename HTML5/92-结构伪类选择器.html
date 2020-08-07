@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .qqq li:first-child {
+            color: red;
+        }
+
+        .qqq li:last-child {
+            color: rosybrown;
+        }
+
+        .qqq li:nth-child(2) {
+            color: seagreen;
+        }
+
+        /* 偶数变色 */
+        .ooo li:nth-child(even) {
+            color: slateblue;
+        }
+
+        /* 奇数变色 */
+        .ooo li:nth-child(even) {
+            color: tomato;
+        }
+
+        /* 从0开始 */
+        ol li:nth-child(3n) {
+            background-color: pink;
+            /* box-sizing: content-box; */
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="qqq">
+        <li>123</li>
+        <li>213</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+    <!-- 隔行变色 -->
+    <ul class="ooo">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <!-- 隔行变色 -->
+    <ol class="sss">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ol>
+</body>
+
+</html>

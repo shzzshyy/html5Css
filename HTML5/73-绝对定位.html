@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box2 {
+            /* 绝对位置 */
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            background-color: pink;
+            height: 200px;
+            width: 200px;
+        }
+
+        .box1 {
+            position: relative;
+            background-color: purple;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 1.如果没有组元素或者组元素没有定位,则以浏览器document文档为准定位 -->
+    <!-- <div class="box1">
+        <div class="box2"></div>
+    </div> -->
+    <!-- 2.当父级有定位 子元素就在父元素里面定位-->
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <!-- 3.如果是3级 第一级有定位 第二级没有 第三极有 则第三级相对第一级定位 -->
+    <!-- 4.绝对定位不占有位置 -->
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+/* 清楚边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 文字不倾斜 */
+em,i{
+    font-style: normal;
+}
+
+/* 去掉小圆点 */
+li {
+    list-style: none;
+}
+
+a {
+    color: rgb(126, 127, 125);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button,input{
+    border: 0;
+    outline: none;
+}

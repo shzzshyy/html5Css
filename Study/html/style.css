@@ -283,11 +283,7 @@ a {
     /* color: red; */
 }
 
-/* 需要清除浮动 */
-.footer {
-    height: 415px;
-    background-color: blue;
-}
+
 
 .clearfix::before, .clearfix:after {
     content: "";
@@ -298,4 +294,34 @@ a {
 }
 .clearfix::before {
     *zoom: 1;
+}
+
+/* 需要清除浮动 */
+.footer {
+    height: 415px;
+    background-color: blue;
+}
+
+.footer .w {
+    padding-top: 35px;
+}
+
+.copyright {
+    float: left;
+    background-color: pink;
+}
+.copyright p {
+    font-size: 12px;
+    color: #666;
+}
+.links {
+    float: right;
+    background-color: orange;
+}
+.links dl {
+    float: left;
+    margin-left: 30px;
+}
+.links dl dd {
+    margin-top: 5px;
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .tb-promo {
+            position: relative;
+            background-color: pink;
+            margin: 100px auto;
+            height: 280px;
+            width: 520px;
+        }
+
+        .tb-promo img {
+            width: 520px;
+            height: 280px;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            /* 绝对定位盒子垂直居中 */
+            top: 50%;
+            margin-top: -15px;
+            /* 加了绝对定位的 不需要转换元素 */
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .prev {
+            left: 0;
+            /* border-radius: 10px; */
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .next {
+            right: 0;
+            /* border-radius: 10px; */
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 7px;
+
+        }
+
+        .promo-nav li {
+            float: left;
+            list-style: none;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px;
+        }
+
+        /* 权重问题 */
+        .promo-nav .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="images/pppp.jpg" alt="">
+        <!-- 左侧按钮 -->
+        <a href="" class="prev">&lt;</a>
+        <a href="" class="next">&lt;</a>
+        <!-- 小圆点 -->
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

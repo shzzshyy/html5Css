@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+
+        .one1 {
+            background-color: purple;
+            z-index: 1;
+        }
+
+        .one2 {
+            background-color: red;
+            z-index: 2;
+        }
+
+        .one3 {
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1.z-index: 1 -->
+    <!-- 2.数值可以是整数 负数 0 ,越大越靠上 -->
+    <!-- 3.只有定位的盒子才有z-index属性 -->
+    <div class="one1 box"></div>
+    <div class="one2 box"></div>
+    <div class="one3 box"></div>
+</body>
+
+</html>

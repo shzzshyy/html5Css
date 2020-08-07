@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        .duohang {
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        div {
+            /* 1.文字显示不开自动换行 */
+            /* white-space: normal; */
+            /* 2.不换行 强制一行显示 */
+            white-space: nowrap;
+            overflow: hidden;
+            /* 3.超出省略号代替 */
+            text-overflow: ellipsis;
+        }
+
+        .duohang {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            /* 第几行省略号 */
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div>啥也不说,此处省略号哈哈哈哈哈哈</div>
+    <div class="duohang">
+        qweqweqweqweqweqweqweqweqweqwewqeqweqwe
+    </div>
+</body>
+
+</html>
