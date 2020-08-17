@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>123</div>
+    <script>
+        var div = document.querySelector('div');
+        //event 就是时间对象
+        // 时间对象只有事件,才会有对象
+        // 时间对象是一系列的事件的相关集合
+        div.onclick = function (event) {
+            console.log(event);
+            //老版本的
+            console.log(window.event);
+            // 兼容性写法
+            console.log(event || window.event);
+        }
+        // div.addEventListener('click', function (e) {
+        //     console.log(e);
+        // });
+        //事件对象可以自定义
+        // 时间对象也有兼容性问题
+
+    </script>
+</body>
+
+</html>

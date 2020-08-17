@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 基本包装类型  : 把简单数据类型 包装成复杂数据类型
+        // var str = 'andy';
+        // // 字符串去重  并找到位置
+        // var ppp = 'asdoqweoqwososdsoowqorqwo';
+        // var index = ppp.indexOf('o');
+        // while (index !== -1) {
+        //     console.log(index);
+        //     ppp.indexOf('o', index + 1);
+        // }
+
+        // var str = 'andy';
+        // console.log(ste.charAt(1));
+
+        // 出现最多
+        var mostStr = 'qweasdqwaswqasdzsxqaa';
+        var dic = {};
+        for (var i = 0; i < mostStr.length; i++) {
+            var chars = mostStr.charAt(i);
+            if (dic[chars]) {
+                dic[chars]++;
+            } else {
+                dic[chars] = 1;
+            }
+        }
+        console.log(dic);
+
+        var max = 0;
+        for (var pro in dic) {
+            if (dic[pro] > max) {
+                max = dic[pro];
+            }
+        }
+        console.log(max);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

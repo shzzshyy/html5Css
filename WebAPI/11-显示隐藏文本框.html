@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" value="手机">
+    <script>
+        var text = document.querySelector('input');
+
+        //获取焦点
+        text.onfocus = function () {
+            if (text.value === '手机') {
+                text.value = '';
+            }
+        }
+        //失去焦点
+        text.onblur = function () {
+            text.value = '手机';
+        }
+    </script>
+</body>
+
+</html>

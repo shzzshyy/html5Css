@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var array = new Array();
+        var arr = [];
+        // 数组转化为字符串 循环
+
+        // 新增元素
+        arr[0] = 'hahah';
+
+        // 数组去重复
+        var repeatArr = [0, 0, 0, 1, 2, 3, 4, 5, 6, 7];
+        var newReaptarr = [];
+        for (var i = 0; i < repeatArr.length; i++) {
+            if (repeatArr[i] != 0) {
+                newReaptarr[newReaptarr.length] = repeatArr[i];
+            }
+        }
+        console.log(newReaptarr);
+
+
+        var colorsArr = ["red", "pink", "blue", "orange", "purple", "cycan", "yellow"];
+        var newColorsArr = [];
+        for (var i = 0; i < colorsArr.length; i++) {
+            newColorsArr[newColorsArr.length] = colorsArr[colorsArr.length - 1 - i];
+        }
+        console.log(newColorsArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

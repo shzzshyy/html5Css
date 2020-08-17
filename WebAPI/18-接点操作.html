@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 节点获取元素更简单 nodeType nodeName NodeValue -->
+    <!-- 元素节点1 属性节点type是2  文本节点是3 -->
+    <div class="box">
+        <span class="erweima">
+            X
+        </span>
+    </div>
+
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script>
+        // 1.父节点
+        var erweima = document.querySelector('.erweima');
+        // var box = document.querySelector('.box');
+        // 距离元素最近的父节点
+        // console.log(erweima.parentNode);//获取父节点
+        // console.log(box);
+        //DOM api提供的方法
+        var ul = document.querySelector('ul');
+        var lis = ul.querySelectorAll('li');
+        //节点操作 childNodes 获取的是所有的节点
+        var liss = ul.childNodes;
+        // console.log(liss);
+        //获取子元素节点
+        console.log(ul.children);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

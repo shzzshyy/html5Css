@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .qq {
+            background-color: purple;
+        }
+
+        .pp {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="qq">文本</div>
+    <script>
+        var text = document.querySelector('div');
+        text.onclick = function () {
+            this.className = 'pp';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function getSum(num1, num2) {
+            var sum = 0;
+            for (var i = num1; i < num2; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        getSum(10, 20);
+        getSum(10, 20, 30);//只取10 20
+        getSum(10);//第二个没有值所以是undefined,任何和undefined相加都是nan
+
+
+        function getResult() {
+            return 666;
+        }
+        console.log(getResult);
+
+        //有return就返回return的值 没有就返回undefined 
+
+
+        // 匿名函数
+        var fff = function ppp() {
+            console.log('aaaa');
+        }
+        fff();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 按键弹起触发 keyup
+        // document.addEventListener('keyup', function () {
+        //     console.log('弹起触发');
+        // });
+        // // 按键按下的时候触发 keydown
+        // document.addEventListener('keydown', function () {
+        //     console.log('按下down');
+        // });
+        // // 按键按下的时候触发 keypress  不能识别功能键 alt crtl shift等等
+        // document.addEventListener('keypress', function () {
+        //     console.log('按下');
+        // });
+
+        // 事件执行顺序 keydown - keypress - keyup
+
+
+        // 键盘按到的哪个键
+        document.addEventListener('keypress', function (e) {
+            // console.log(e.key); //有兼容性问题
+            console.log(e.keyCode);
+            if (e.keyCode === 65) {
+                alert('你按下了A键');
+            } {
+                alert('你啥也没按');
+            }
+            // keyup 和 keydown 不区分大小写  keypress区分大小写
+            // 我们可以通过keypress 和 keycode获取到的ASCII值 来判断点击的是哪个键
+
+        });
+    </script>
+</body>
+
+</html>

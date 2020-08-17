@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.baidu.com">222</a>
+    <script>
+        //常见对象的属性和方法
+        var div = document.querySelector('div');
+        div.addEventListener('click', function () {
+
+        });
+        div.addEventListener('mouseover', function () {
+
+        });
+        div.addEventListener('mouseout', function () {
+
+        });
+
+        //阻止默认行为(事件) 让连接不跳转或者按钮不提交
+        var a = document.querySelector('a');
+        a.addEventListener('click', function (e) {
+            e.preventDefault();//不再有跳转效果了  标准写法
+            // 阻止冒泡
+            e.stopPropagation();
+            window.event.cancelBubble();//老版本阻止冒泡
+        }, false);
+        a.onclick = function (e) {
+            // 低版本
+            e.returnVlue;
+        }
+        // return false
+
+
+        // 阻止时间冒泡
+
+    </script>
+</body>
+
+</html>

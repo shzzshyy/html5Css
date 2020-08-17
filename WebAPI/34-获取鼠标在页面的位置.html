@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('click', function (e) {
+            // 1.client 可视区为主
+            console.log(e);
+            console.log(e.clientX); //点击 距离左边
+            console.log(e.clientY); //点击 距离顶部
+            console.log(e.pageX); //距离  页面最顶部
+            console.log(e.pageY); // 距离 页面最左边
+        });
+    </script>
+</body>
+
+</html>

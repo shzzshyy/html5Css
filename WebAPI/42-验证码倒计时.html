@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>获取短信验证码</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            var i = 10;
+            btn.disabled = true;
+            countDown();
+            var timer = setInterval(countDown, 1000);
+            function countDown() {
+                if (i === 0) {
+                    clearInterval(timer);
+                    btn.disabled = false;
+                    btn.innerHTML = '重新获取验证码';
+                } else {
+                    i--;
+                    btn.innerHTML = String(i) + '秒后可以重新获取';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

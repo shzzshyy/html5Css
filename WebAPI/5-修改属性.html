@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="ooo">one</button>
+    <button id="ppp">two</button>
+    <br>
+    <img src="123123.png" alt="" title="明教">
+    <script>
+        var one = document.getElementById('ooo');
+        var two = document.getElementById('ppp');
+        var im = document.querySelector('img');
+        one.onclick = function () {
+            im.src = '456456.png';
+            im.title = '圣墓山';
+        }
+        two.onclick = function () {
+            im.src = '123123.png';
+            im.title = '映月湖';
+        }
+
+
+    </script>
+</body>
+
+</html>

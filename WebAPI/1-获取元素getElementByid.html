@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time">2019-09-09</div>
+    <script>
+        // 1.因为文档页面从上往下加载,所以要现有标签 通过id找到标签
+        var time = document.getElementById('time');
+        console.log(time);
+        // 查看标签的属性和方法
+        console.dir(time)  
+    </script>
+    <!-- // 2.根据标签名获取元素 -->
+    <ul>
+        <li>123123</li>
+        <li>123123</li>
+        <li>123123</li>
+        <li>123123</li>
+        <li>123123</li>
+    </ul>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+    </script>
+
+    <!-- 通过class名字获取标签 -->
+    <div class="box" id='box'></div>
+    <script>
+        var divbox = document.getElementsByClassName('box');
+        console.log(divbox);
+    </script>
+
+    <!-- 返回指定选择器的第一个元素 -->
+    <script>
+        // 通过class
+        var firstbox = document.querySelector('.box');
+        //通过ID
+        var idbox = document.querySelector('#box');
+    </script>
+</body>
+
+</html>

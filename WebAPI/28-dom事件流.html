@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- js代码只能是在捕获时间 或者 冒泡事件之一 -->
+    <div class="father">
+        <div class="son">
+            son盒子
+        </div>
+    </div>
+    <script>
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function () { alert('qqq') });
+
+        // 第三个参数 如果是true 则处于捕获阶段 如果是both 或者省略 则是冒泡阶段
+        //body - father - son
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function () {
+            alert('son');
+        });
+    </script>
+</body>
+
+</html>

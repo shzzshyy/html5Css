@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id='btn'>唐伯虎</button>
+    <script>
+        // 1.事件三部分组成  事件源 事件类型  事件处理程序
+        // 事件源
+        var btn = document.getElementById('btn');
+        // 事件类型 如何触发  鼠标点击 鼠标经过
+        // 事件处理程序 通过一个函数赋值完成
+        btn.onclick = function () {
+            alert('点秋香');
+        };
+        // onmouseover 鼠标经过
+        // onmouseout 鼠标离开
+
+
+    </script>
+</body>
+
+</html>

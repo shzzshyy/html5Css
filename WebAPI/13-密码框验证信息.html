@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .message {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" class="ipt">
+        <p class="message">请输入6-16位密码</p>
+    </div>
+    <script>
+        var input = document.querySelector('.ipt');
+        var p = document.querySelector('.message');
+        //失去焦点
+        input.onblur = function () {
+            console.log('123123');
+            // if (this.value.length < 6 || this.value.length > 16) {
+            //     console.log('错误');
+            // }
+        }
+        input.onfocus = function () {
+            console.log('99999');
+        }
+    </script>
+</body>
+
+</html>

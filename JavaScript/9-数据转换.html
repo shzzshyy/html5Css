@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.转换字符串
+        var num = 10;
+        var str = num.toString;
+        var pp = String(num);
+        var lll = '' + num;
+
+        //2.转化为数字
+        var str = prompt(输入你的年龄);
+        var num1 = parseInt(str);
+        var num2 = parseFloat(str);
+        var str1 = '12';
+        var num3 = Number(str1);
+
+        // 3.隐式转换 加减乘除
+        console.log('123' + 0);
+
+        // 4. 布尔值 除了这几个别的都是true
+        console.log(Boolean(''));
+        console.log(Boolean(0));
+        console.log(Boolean(NaN));
+        console.log(Boolean(undefined));
+        console.log(Boolean(null));
+
+        // 5.比较运算符会强制转换
+        console.log(18 == '18');
+        //  === 要求类型相同 值也相同
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

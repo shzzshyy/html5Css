@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 传统时间只能添加一个 -->
+    <!-- 时间监听可以添加多个 -->
+    <button>传统注册时间</button>
+    <button>方法监听注册时间</button>
+    <button>方法监听注册时间</button>
+    <Script>
+        var btns = document.querySelectorAll('button');
+        btns[0].onclick = function () {
+            alert('1');
+        }
+        btns[0].onclick = function () {
+            alert('2');
+        }
+
+        // 事件监听注册事件 addEventListener 第一个参数必定是字符串click不能加on
+        btns[1].addEventListener('click', function () {
+            alert('222');
+        });
+        btns[1].addEventListener('click', function () {
+            alert('33');
+        });
+
+        // ie9之前的版本支持
+        btns[2].attachEvent('onclick', function () {
+
+        });
+
+    </Script>
+</body>
+
+</html>

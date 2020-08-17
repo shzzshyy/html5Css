@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.逻辑与 逻辑短路运算  如果表达式1是真 则返回第二个  如果1为假 则返回1
+        console.log(123 && 456);
+        console.log(0 && 456);
+        console.log(123 && 789 && 666);
+        // 2.逻辑或 逻辑短路运算 如果表达式1是真  则返回第一个  如果1位假 则返回2
+
+        //逻辑中断很重要 会影响运行结果
+        var num = 0;
+        console.log(123 || num++);
+        alert(num); //num为0   或操作直接返回了123  ++不进行操作
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

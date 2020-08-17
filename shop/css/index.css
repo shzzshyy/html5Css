@@ -39,9 +39,31 @@
     float: left;
     width: 63px;
     height: 71px;
+    text-align: center;
     border-right: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
 }
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background-color: pink;
+    margin-top: 12px;
+}
+
+.lifeservice ul li h4 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.lifeservice ul li i img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 .bargin {
     margin-top: 5px;
@@ -73,3 +95,4 @@
     height: 24px;
     line-height: 24px;
 }
+
