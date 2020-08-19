@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 200px;
+            background-color: rebeccapurple;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击</button>
+    <div></div>
+    <span></span>
+    <script>
+
+
+        function animate(obj, target, callback) {
+            //给不同的元素指定不同的定时器 点击一次创建一个 预防多次点击
+            //先清除 之前的定时器 在创建
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                //先快后慢就算值
+                //要把step取整 要不然会有小数
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil((target - obj.offsetLeft) / 10) : Math.floor((target - obj.offsetLeft) / 10);
+
+                if (obj.offsetLeft === target) {
+                    clearInterval(obj.timer);
+                    if (callback) {
+                        callback();
+                    }
+                } else {
+                    // 均速就固定值 
+                    obj.style.left = obj.offsetLeft + step + 'px';
+                }
+            }, 15);
+        }
+        var div = document.querySelector('div');
+        animate(div, 200);
+
+        var span = document.querySelector('span');
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            animate(span, 400, function () {
+                span.style.backgroundColor = 'red';
+            });
+        });
+    </script>
+</body>
+
+</html>

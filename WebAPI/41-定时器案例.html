@@ -10,7 +10,7 @@
         .min,
         .second {
             background-color: lightgray;
-            width: 30px;
+            width: 60px;
             height: 30px;
             /* float: left; */
             display: inline-block;
@@ -37,7 +37,7 @@
         var hour = document.querySelector('.hour');
         var min = document.querySelector('.min');
         var sec = document.querySelector('.second');
-        var inputTime = +new Date('2020-8-17 18:00:00');
+        var inputTime = +new Date('2020-8-19 18:00:00');
         countDown();
         var timer = setInterval(countDown, 1000);
 
@@ -57,13 +57,13 @@
             var times = (inputTime - nowTime) / 1000;//得到秒数
             var h = parseInt(times / 60 / 60); //还有多少小时
             h = h < 10 ? '0' + h : h;
-            hour.innerHTML = h;
+            hour.innerHTML = h + '时';
             var m = parseInt(times / 60 % 60);
             m = m < 10 ? '0' + m : m;
-            min.innerHTML = m;
+            min.innerHTML = m + '分';
             var s = parseInt(times % 60);
             s = s < 10 ? '0' + s : s;
-            sec.innerHTML = s;
+            sec.innerHTML = s + '秒';
         }
     </script>
 </body>

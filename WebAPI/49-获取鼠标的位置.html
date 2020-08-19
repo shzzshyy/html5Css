@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 60px auto;
+            background-color: seagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        var div = document.querySelector('div');
+        div.addEventListener('mousemove', function (e) {
+            // 鼠标在页面中的距离 e.pagex e.pagey
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            this.innerHTML = 'x坐标是' + x + 'y坐标是' + y;
+        })
+    </script>
+</body>
+
+</html>
