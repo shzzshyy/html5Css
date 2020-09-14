@@ -1,32 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id='tab-bar'>
+      <div class="tab-bar-item">首页</div>
+      <div class="tab-bar-item">分类</div>
+      <div class="tab-bar-item">购物车</div>
+      <div class="tab-bar-item">我的</div>
     </div>
-    <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./assets/css/base.css";
+
+#tab-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background-color: #f6f6f6;
+  box-shadow: 0 1px 1px rgba(100, 100, 100, .1);
+}
+.tab-bar-item{
+  flex: 1;
   text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  height: 49px;
+  line-height: 49px;
 }
 </style>
