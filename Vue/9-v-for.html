@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click='add'>添加</button>
+        <button @click='remove'>删除</button>
+        <!-- <ul>
+            <li v-for='item in arr'>xxxx:{{item}}</li>
+        </ul> -->
+        <ul>
+            <li v-for='(it,index) in arr'>
+                {{index}} xx:{{it}}
+            </li>
+        </ul>
+        <h2 v-for='item in vagetable' v-bind:title='item.name'>
+            {{item.name}}
+        </h2>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                arr: ["sss", "aaa", "qqq", "eee"],
+                vagetable: [
+                    { name: '西蓝花' },
+                    { name: '吃吃吃' }
+                ]
+            },
+            methods: {
+                add: function () {
+                    this.vagetable.push({ name: 'pUBGenre' });
+                },
+                remove: function () {
+                    this.vagetable.shift();
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

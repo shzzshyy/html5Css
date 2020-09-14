@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id='app'>
+        <button @click='doit("谁谁谁")'>点击</button>
+        <!-- keyup 按键盘就触发  .enter就是按enter键触发 -->
+        <input type="text" @keyup.enter='sayhi'>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            methods: {
+                doit: function (p1) {
+                    console.log(p1);
+                },
+                sayhi: function () {
+                    alert('hi~');
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <cpn2></cpn2>
+  </div>
+  <script src="vue.js"></script>
+  <script>
+   
+   const cpnt1 = Vue.extend({
+      template: `
+      <div>123123123</div>
+      <p>pppppppp</p>
+      `
+    })
+    const cpnt2 = Vue.extend({
+      template: `
+      <div>
+      <div>123123123</div>
+      <p>llllllll</p>
+      <cpn1></cpn1>
+      </div>
+      `,
+      components: {
+        cpn1: cpnt1
+      }
+    })
+
+    //语法糖全局组件
+    Vue.component('zujianming',{
+      template: `
+      <div>123123123</div>
+      <p>pppppppp</p>
+      `
+    })
+    // 
+
+    const app = new Vue({
+      el: "#app",
+      data: {
+        message: '你好吗'
+      },
+      components:{
+        cpn2: cpnt2
+      }
+
+    })
+  </script>
+</body>
+</html>

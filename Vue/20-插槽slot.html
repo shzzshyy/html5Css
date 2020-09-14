@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id='app'>
+    <cpn><button>1212</button></cpn>
+    <cpn><span>123123</span></cpn>
+    <cpn><i>oooo</i></cpn>
+    <cpn></cpn>
+    <cpn><span slot="right"></span></cpn>
+  </div>
+
+  <cpn slot-scope='slot'>
+    <!-- slot.data//就是数组获取子组件中的插槽数据 -->
+  </cpn>
+</body>
+
+<template id="cpn">
+  <div>
+    <h2>123123</h2>
+    <p>23333</p>
+    <slot></slot>
+    <slot name='right'></slot>
+    <!-- 别名插槽 给 -->
+  </div>
+  <div>
+    <!-- <solot :data='shuzu'></solot> -->
+  </div>
+</template>
+
+<script src="vue.js"></script>
+<script>
+  
+  // 1.插槽作用: 为了让组件有更多的扩展性
+  // 2.抽取共性 保留不同
+  const app = new Vue({
+    el:'#app',
+    components:{
+      cpn:{
+        template: '#cpn'
+      }
+    }
+
+  })
+</script>
+</html>

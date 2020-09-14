@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click='add'>加</button>
+        <span v-text='count'></span>
+        <button @click=' release'>减</button>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count: '0'
+            },
+            methods: {
+                add: function () {
+                    if (this.count >= 10) {
+                        alert('别加了SB');
+                    } else {
+                        this.count++;
+                    }
+                },
+                release: function () {
+                    if (this.count <= 0) {
+                        alert('别减了,一滴都没有了');
+                    } else {
+                        this.count--;
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

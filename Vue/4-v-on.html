@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <div id="app">
+        <button v-on:click='doIt'>嘿嘿嘿</button>
+        <button @click='doIt'>ppppp</button>
+        <button @dblclick='doIt'>pppp</button>
+        <h2 @click='changefood'>{{food}}</h2>
+    </div>
+    <script>
+        // 点击事件
+        var app = new Vue({
+            el: "#app",
+            data: {
+                food: '吃菜'
+            },
+            methods: {
+                doIt: function () {
+                    alert('123');
+                },
+                changefood: function () {
+                    this.food = this.food + '加个蛋';
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
