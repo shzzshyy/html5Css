@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1.
+    // setTimeout(() => {
+    //   console.log('hello world')
+    // }, 1000);
+    //参数是函数  函数两个值 也都是函数
+    new Promise((resolve,reject) => {
+      setTimeout(() => {
+       resolve()
+      }, 1000);
+    }).then(() => {
+
+    })
+
+    //什么情况会用Promise  需要异步操作时  使用Promise 进行封装
+    Promise.all([
+      new Promise((resolve,reject) => {
+        setTimeout(() => {
+          resolve('result1')
+        }, 1000);
+      }),
+      new Promise((resolve,reject) => {
+        setTimeout(() => {
+          resolve('result2')
+        }, 2000);
+      })
+    ]).then(results => {
+      console.log(results)
+    })
+
+
+  </script>
+</body>
+</html>
