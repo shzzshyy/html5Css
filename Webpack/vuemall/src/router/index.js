@@ -5,6 +5,8 @@ const Home = () => import('../views/home/Home')
 const Profile = () => import('../views/profile/Profile')
 const PurchaseCar = () => import('../views/purchaseCar/PurchaseCar')
 const Setting = () => import('../views/setting/Setting')
+const Detail = () => import('../views/detail/Detail')
+
 
 Vue.use(VueRouter)
 
@@ -28,6 +30,10 @@ const routes = [
   {
     path: '/setting',
     component: Setting
+  },
+  {
+    path: '/detail/:iid',
+    component: Detail
   }
 ]
 
